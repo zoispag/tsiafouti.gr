@@ -3,17 +3,18 @@
     class="flex justify-between px-8 py-6 top-0 sticky overflow-hidden border-red-700 border-t-4 z-50"
     id="navbar"
   >
-    <img
-      class="h-8 object-cover"
-      src="~@/assets/media/logo.png"
+    <a href="#hero" class="flex"><img
+      class="h-12 object-cover"
+      src="~@/assets/media/logo_head.jpg"
       alt="Tsiafouti.gr"
       href="#top"
     >
+      <div class="ml-8 text-yellow-800 font-semibold"><p>Τσιαφούτη Δήμητρα</p><p>Ψυχολόγος - Ψυχοθεραπεύτρια</p></div>
+    </a>
     <nav class="flex items-center">
-      <div class="px-4 font-medium text-gray-800">Βιογραφικό</div>
-      <div class="px-4 font-medium text-gray-800">Λίγα λόγια</div>
-      <div class="px-4 font-medium text-gray-800">Θεραπείες</div>
-      <div class="px-4 font-medium text-gray-800">Επικοινωνία</div>
+      <a href="#bio" class="px-4 font-bold text-gray-800">Βιογραφικό</a>
+      <a href="#services" class="px-4 font-bold text-gray-800">Υπηρεσίες</a>
+      <a href="#contact" class="px-4 font-bold text-gray-800">Επικοινωνία</a>
     </nav>
   </div>
 </template>
