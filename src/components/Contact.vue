@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="py-16 px-32 text-sm bg-gray-200">
+  <div id="contact" class="py-16 px-8 md:px-32 text-sm bg-gray-200">
     <form class="w-full max-w-lg">
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
@@ -22,7 +22,7 @@
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Μηνυμα
           </label>
-          <textarea class="no-resize appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+          <textarea class="no-resize appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-32 md:h-48 resize-none" id="message"></textarea>
         </div>
       </div>
       <div class="md:flex md:items-center">
