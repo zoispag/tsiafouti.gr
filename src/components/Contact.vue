@@ -1,40 +1,56 @@
 <template>
   <div id="contact" class="py-16 px-8 md:px-32 text-sm bg-gray-200">
-    <form class="w-full max-w-lg">
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-            Ονομα
-          </label>
-          <input class="appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="nick" type="text">
+    <form class="space-y-8 divide-y divide-gray-200">
+      <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
+        <div>
+          <div>
+            <h3 class="text-lg leading-6 font-medium text-gray-900">
+              Φόρμα επικοινωνίας
+            </h3>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500">
+              This information will be displayed publicly so be careful what you share.
+            </p>
+          </div>
+
+          <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label for="username" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Όνομα
+              </label>
+              <div class="mt-1 sm:mt-0 sm:col-span-2">
+                <div class="max-w-lg flex rounded-md shadow-sm">
+                  <input id="name" type="text" name="name" autocomplete="name" class="block max-w-lg w-full shadow-sm focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md">
+                </div>
+              </div>
+            </div>
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Email
+              </label>
+              <div class="mt-1 sm:mt-0 sm:col-span-2">
+                <input id="email" name="email" type="email" autocomplete="email" class="block max-w-lg w-full shadow-sm focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md">
+              </div>
+            </div>
+
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Μήνυμα
+              </label>
+              <div class="mt-1 sm:mt-0 sm:col-span-2">
+                <textarea id="about" name="about" rows="5" class="max-w-lg shadow-sm block w-full focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md"></textarea>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-            E-mail
-          </label>
-          <input class="appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-            Μηνυμα
-          </label>
-          <textarea class="no-resize appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-32 md:h-48 resize-none" id="message"></textarea>
-        </div>
-      </div>
-      <div class="md:flex md:items-center">
-        <div class="md:w-1/3">
-          <button class="shadow bg-orange-800 hover:bg-orange-800 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-            Αποστολή
-          </button>
-        </div>
-        <div class="md:w-2/3"></div>
+
+      <div class="pt-5">
+        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+          Αποστολή
+        </button>
       </div>
     </form>
-
   </div>
 </template>
 
