@@ -15,7 +15,8 @@
     "core-js": "^3.3.2",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue2-smooth-scroll": "^1.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
