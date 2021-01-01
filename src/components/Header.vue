@@ -5,7 +5,7 @@
   >
     <a href="#hero" class="flex"><img
       class="h-12 object-cover"
-      src="~@/assets/media/logo_head.jpg"
+      src="~@/assets/media/logo_head.png"
       alt="Tsiafouti.gr"
       href="#top"
     >
