@@ -2,10 +2,8 @@
   <div id="contact" class="py-16 px-8 md:px-32 text-sm bg-gray-200">
     <form
       class="space-y-8 divide-y divide-gray-200"
-      name="contact"
+      action="https://formspree.io/f/xyybbakr"
       method="POST"
-      netlify
-      netlify-honeypot="bot-field"
     >
       <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
