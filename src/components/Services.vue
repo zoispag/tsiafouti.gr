@@ -4,7 +4,7 @@
       <h2 id="services" class="uppercase text-gray-800 font-bold tracking-wider">Υπηρεσιες</h2>
 
       <div class="flex">
-        <div class="mt-8 text-yellow-800">
+        <div class="mt-8 text-gray-800">
           <div>Όλες οι μορφές ψυχοθεραπείας καλύπτονται από το Θεραπευτικό Απόρρητο, τον Κώδικα Δεοντολογίας του Συλλόγου Ελλήνων Ψυχολόγων και του Κώδικα Δεοντολογίας της Ελληνικής Εταιρείας Συστημικής Θεραπείας. </div>
 
           <dl class="mt-6 space-y-6 divide-y divide-gray-400">
