@@ -2,28 +2,35 @@
   <div id="contact" class="py-16 px-8 md:px-32 text-sm bg-gray-200">
     <form
       class="space-y-8 divide-y divide-gray-200"
-      action="https://formspree.io/f/xyybbakr"
-      method="POST"
+      @submit.prevent="submitForm"
     >
       <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
         <div>
           <div>
-            <h3 class="text-lg leading-6 font-medium text-gray-900">
+            <h3 class="text-lg leading-6 font-medium text-gray-900 pb-4">
               Φόρμα επικοινωνίας
             </h3>
-            <p class="mt-1 max-w-2xl text-sm text-gray-500">
-              This information will be displayed publicly so be careful what you share.
-            </p>
+
+            <EmailBot v-if="isBot" />
+            <EmailSuccess v-if="status === 'SUCCESS'" />
+            <EmailError v-if="status === 'ERROR'" />
           </div>
 
-          <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
+          <div class="sm:mt-5 space-y-6 sm:space-y-5">
             <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label for="username" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
                 Όνομα
               </label>
               <div class="mt-1 sm:mt-0 sm:col-span-2">
                 <div class="max-w-lg flex rounded-md shadow-sm">
-                  <input id="name" type="text" name="name" autocomplete="name" class="block max-w-lg w-full shadow-sm focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md">
+                  <input
+                    v-model="name"
+                    required
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    class="block max-w-lg w-full shadow-sm focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md"
+                  >
                 </div>
               </div>
             </div>
@@ -33,7 +40,14 @@
                 Email
               </label>
               <div class="mt-1 sm:mt-0 sm:col-span-2">
-                <input id="email" name="email" type="email" autocomplete="email" class="block max-w-lg w-full shadow-sm focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md">
+                <input
+                  v-model="email"
+                  required
+                  name="_replyto"
+                  type="email"
+                  autocomplete="email"
+                  class="block max-w-lg w-full shadow-sm focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md"
+                >
               </div>
             </div>
 
@@ -42,11 +56,26 @@
                 Μήνυμα
               </label>
               <div class="mt-1 sm:mt-0 sm:col-span-2">
-                <textarea id="about" name="about" rows="5" class="max-w-lg shadow-sm block w-full focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md"></textarea>
+                <textarea
+                  v-model="message"
+                  required
+                  name="message"
+                  rows="5"
+                  class="max-w-lg shadow-sm block w-full focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm border-gray-300 rounded-md"
+                ></textarea>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="hidden">
+        <label class="sr-only">Don’t fill this out if you're human: </label>
+        <input
+          v-model="bot"
+          name="bot-field"
+          placeholder="This field is only for the robots."
+        />
       </div>
 
       <div class="pt-5">
@@ -59,8 +88,53 @@
 </template>
 
 <script>
+import axios from 'axios'
+import EmailSuccess from './EmailSuccess.vue'
+import EmailError from './EmailError.vue'
+import EmailBot from './EmailBot.vue'
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  components: {
+    EmailSuccess,
+    EmailError,
+    EmailBot
+  },
+  data () {
+    return {
+      name: '',
+      email: '',
+      message: '',
+      isBot: false,
+      bot: null,
+      status: null
+    }
+  },
+  methods: {
+    submitForm () {
+      this.status = null
+
+      if (this.bot != null) {
+        this.isBot = true
+        this.status = 'SUCCESS'
+        return
+      }
+
+      axios.post('https://formspree.io/f/xyybbakr', {
+        name: this.name,
+        _replyto: this.email,
+        _subject: `${this.name} | Contact form message from tsiafouti.gr`,
+        message: this.message
+      }).then((response) => {
+        this.nameMsg = ''
+        this.emailMsg = ''
+        this.messageMsg = ''
+        this.status = 'SUCCESS'
+      }).catch(() => {
+        this.status = 'ERROR'
+      })
+    }
+  }
 }
 </script>
 
