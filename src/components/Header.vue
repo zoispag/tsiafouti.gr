@@ -22,9 +22,9 @@
       </svg>
     </button> -->
     <nav class="hidden md:visible md:flex items-center">
-      <a href="#bio" class="px-4 font-bold text-gray-800">Βιογραφικό</a>
-      <a href="#services" class="px-4 font-bold text-gray-800">Υπηρεσίες</a>
-      <a href="#contact" class="px-4 font-bold text-gray-800">Επικοινωνία</a>
+      <a v-smooth-scroll href="#bio" class="px-4 font-bold text-gray-800">Βιογραφικό</a>
+      <a v-smooth-scroll href="#services" class="px-4 font-bold text-gray-800">Υπηρεσίες</a>
+      <a v-smooth-scroll href="#contact" class="px-4 font-bold text-gray-800">Επικοινωνία</a>
     </nav>
   </div>
 </template>
