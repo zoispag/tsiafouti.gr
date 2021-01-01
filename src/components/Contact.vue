@@ -4,7 +4,7 @@
       class="space-y-8 divide-y divide-gray-200"
       name="contact"
       method="POST"
-      data-netlify="true"
+      netlify
       netlify-honeypot="bot-field"
     >
       <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
