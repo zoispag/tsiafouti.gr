@@ -3,7 +3,7 @@
     class="flex justify-between px-8 py-6 top-0 sticky overflow-hidden border-red-700 border-t-4 z-50"
     id="navbar"
   >
-    <a href="#hero" class="flex"><img
+    <a v-smooth-scroll href="#hero" class="flex"><img
       class="h-12 object-cover"
       src="~@/assets/media/logo_head.png"
       alt="Tsiafouti.gr"
