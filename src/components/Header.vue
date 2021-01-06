@@ -36,7 +36,6 @@ export default {
 <style scoped lang="scss">
   #navbar {
     background-color: rgba(235, 229, 220, 0.8);
-    // background-color: rgba(0, 0, 0, 0.1);
-    // backdrop-filter: blur(.1rem);
+    backdrop-filter: blur(.1rem);
   }
 </style>
