@@ -120,7 +120,7 @@ export default {
         return
       }
 
-      axios.post('https://formspree.io/f/xyybbakr', {
+      axios.post('https://formspree.io/f/xdopyapp', {
         name: this.name,
         _replyto: this.email,
         _subject: `${this.name} | Contact form message from tsiafouti.gr`,
