@@ -1,7 +1,7 @@
 <template>
-  <div id="bio" class="py-32 px-12 md:px-24 xl:px-64 text-lg bg-gray-300">
+  <div id="services" class="py-32 px-12 md:px-24 xl:px-64 text-lg bg-gray-300">
     <div class="mx-auto w-full xl:w-5/5">
-      <h2 id="services" class="uppercase text-gray-800 font-bold tracking-wider">Υπηρεσιες</h2>
+      <h2 class="uppercase text-gray-800 font-bold tracking-wider">Υπηρεσιες</h2>
 
       <div class="flex">
         <div class="mt-8 text-gray-800">
@@ -45,6 +45,15 @@
             </ServiceItem>
 
             <ServiceItem
+              title="Διαδικτυακές Υπηρεσίες Ψυχοθεραπείας"
+              :initial-expanded="activeItem == 5"
+              :key="`service-item-5-${activeItem}`"
+              @expandClick="activeItem = 5"
+            >
+              Η online ψυχοθεραπεία προτείνεται σε περιπτώσεις όπου το άτομο δεν μπορεί να συμμετέχει στις συνεδρίες δια ζώσης. Διαρκεί 50 λεπτά και πραγματοποιείται εβδομαδιαία ή ανά δεκαπενθήμερο.
+            </ServiceItem>
+
+            <ServiceItem
               title="Ψυχοθεραπεία παιδιού και εφήβου"
               :initial-expanded="activeItem == 4"
               :key="`service-item-4-${activeItem}`"
@@ -55,15 +64,6 @@
 
               <h4 class="mt-8 text-gray-800">Ο Έφηβος</h4>
               <div class="mt-2">Η εφηβεία από μόνη της χαρακτηρίζεται ως μία πολύ σημαντική αναπτυξιακή περίοδος, η οποία περιλαμβάνει πολλές εσωτερικές ψυχικές και σωματικές αλλαγές. Είναι σημαντικό ο/η έφηβος/η να λάβει την υποστήριξη που χρειάζεται για να διαχειριστεί την προσωπική αυτή εξέλιξη και όλους τους προβληματισμούς που συνοδεύουν την αναπτυξιακή περίοδο της εφηβείας. Συχνά, αρκετοί έφηβοι δυσκολεύονται να διαχειριστούν τις αλλαγές που βιώνουν και αντιμετωπίζουν δυσκολίες, για τις οποίες χρειάζονται καθοδήγηση, με πιο βασικό στόχο την θετική σκέψη για το μέλλον. Η συμμετοχή και η στήριξη των γονέων αποτελεί πολύ σημαντικό κομμάτι της διαδικασίας.</div>
-            </ServiceItem>
-
-            <ServiceItem
-              title="Διαδικτυακές Υπηρεσίες Ψυχοθεραπείας"
-              :initial-expanded="activeItem == 5"
-              :key="`service-item-5-${activeItem}`"
-              @expandClick="activeItem = 5"
-            >
-              Η online ψυχοθεραπεία προτείνεται σε περιπτώσεις όπου το άτομο δεν μπορεί να συμμετέχει στις συνεδρίες δια ζώσης. Διαρκεί 50 λεπτά και πραγαμτοποιείται εβδομαδιαία ή ανά δεκαπενθήμερο.
             </ServiceItem>
 
           </dl>
