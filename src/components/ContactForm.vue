@@ -15,7 +15,7 @@
           <EmailError v-if="status === 'ERROR'" />
         </div>
 
-        <div class="sm:mt-16 space-y-6 sm:space-y-5">
+        <div class="sm:mt-4 space-y-6 sm:space-y-5">
           <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
             <label for="username" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
               Όνομα*
@@ -78,7 +78,7 @@
     </div>
 
     <div class="pt-5">
-      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+      <button type="submit" class="float-none lg:float-right inline-flex justify-left py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
         Αποστολή
       </button>
     </div>
