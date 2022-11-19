@@ -10,8 +10,9 @@
       href="#top"
     >
       <div class="ml-6 md:ml-8 text-right md:text-left ">
+        <p class="font-normal text-gray-700">Χώρος ψυχοθεραπείας και συμβουλευτικής</p>
         <p class="font-bold">Τσιαφούτη Δήμητρα</p>
-        <p class="font-normal text-yellow-800">Ψυχολόγος - Ψυχοθεραπεύτρια</p>
+        <p class="font-normal text-yellow-800">Ψυχολόγος - Ψυχοθεραπεύτρια παιδιού και εφήβου, οικογενειακή θεραπεύτρια</p>
       </div>
     </a>
     <nav class="hidden md:visible md:flex items-center">
