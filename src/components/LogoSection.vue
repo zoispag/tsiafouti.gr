@@ -7,14 +7,3 @@
     >
   </div>
 </template>
-
-<script>
-
-export default {
-  name: 'LogoSection'
-}
-</script>
-
-<style scoped lang="scss">
-
-</style>

@@ -1,3 +1,43 @@
+<script setup>
+import { ref } from "vue";
+
+import axios from 'axios'
+import EmailSuccess from './EmailSuccess.vue'
+import EmailError from './EmailError.vue'
+import EmailBot from './EmailBot.vue'
+
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const isBot = ref(false)
+const bot = ref(null)
+const status = ref(null)
+
+function submitForm() {
+  status.value = null
+
+  if (bot.value != null) {
+    isBot.value = true
+    status.value = 'SUCCESS'
+    return
+  }
+
+  axios.post('https://formspree.io/f/xdopyapp', {
+    name: name.value,
+    _replyto: email.value,
+    _subject: `${name.value} | Contact form message from tsiafouti.gr`,
+    message: message.value
+  }).then((response) => {
+    name.value = ''
+    email.value = ''
+    message.value = ''
+    status.value = 'SUCCESS'
+  }).catch(() => {
+    status.value = 'ERROR'
+  })
+}
+</script>
+
 <template>
   <div id="contact" class="py-16 px-8 md:px-32 text-sm bg-gray-200">
     <form
@@ -86,58 +126,3 @@
     </form>
   </div>
 </template>
-
-<script>
-import axios from 'axios'
-import EmailSuccess from './EmailSuccess.vue'
-import EmailError from './EmailError.vue'
-import EmailBot from './EmailBot.vue'
-
-export default {
-  name: 'Header',
-  components: {
-    EmailSuccess,
-    EmailError,
-    EmailBot
-  },
-  data () {
-    return {
-      name: '',
-      email: '',
-      message: '',
-      isBot: false,
-      bot: null,
-      status: null
-    }
-  },
-  methods: {
-    submitForm () {
-      this.status = null
-
-      if (this.bot != null) {
-        this.isBot = true
-        this.status = 'SUCCESS'
-        return
-      }
-
-      axios.post('https://formspree.io/f/xdopyapp', {
-        name: this.name,
-        _replyto: this.email,
-        _subject: `${this.name} | Contact form message from tsiafouti.gr`,
-        message: this.message
-      }).then((response) => {
-        this.nameMsg = ''
-        this.emailMsg = ''
-        this.messageMsg = ''
-        this.status = 'SUCCESS'
-      }).catch(() => {
-        this.status = 'ERROR'
-      })
-    }
-  }
-}
-</script>
-
-<style scoped lang="scss">
-
-</style>

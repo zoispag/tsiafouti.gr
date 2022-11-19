@@ -1,3 +1,25 @@
+<script setup>
+import { ref } from "vue";
+
+const props = defineProps({
+  title: String,
+  id: Number,
+  initialExpanded: {
+    type: Boolean,
+    default: false
+  }
+})
+
+const emit = defineEmits(['expandClick'])
+
+const isExpanded = ref(props.initialExpanded)
+
+function toggle() {
+  isExpanded.value = !isExpanded.value
+  emit('expandClick', 1)
+}
+</script>
+
 <template>
   <div class="pt-6">
     <dt>
@@ -32,32 +54,3 @@
 
   </div>
 </template>
-
-<script>
-export default {
-  name: 'ServiceItem',
-  props: {
-    title: String,
-    id: Number,
-    initialExpanded: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data () {
-    return {
-      isExpanded: this.initialExpanded
-    }
-  },
-  methods: {
-    toggle () {
-      this.isExpanded = !this.isExpanded
-      this.$emit('expandClick', 1)
-    }
-  }
-}
-</script>
-
-<style scoped lang="scss">
-
-</style>

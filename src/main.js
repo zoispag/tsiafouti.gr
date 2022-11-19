@@ -1,11 +1,9 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import VueSmoothScroll from 'vue3-smooth-scroll'
 import App from './App.vue'
-import '@/assets/css/tailwind.scss'
-import vueSmoothScroll from 'vue2-smooth-scroll'
 
-Vue.use(vueSmoothScroll)
-Vue.config.productionTip = false
+import './style.css'
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App)
+app.use(VueSmoothScroll)
+app.mount('#app')

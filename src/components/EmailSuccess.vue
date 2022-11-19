@@ -24,13 +24,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'EmailSuccess'
-}
-</script>
-
-<style>
-
-</style>
