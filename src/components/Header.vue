@@ -23,18 +23,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Header',
-  data () {
-    return {
-      showMenu: false
-    }
-  }
-}
-</script>
-
-<style scoped lang="scss">
+<style scoped>
   #navbar {
     background-color: rgba(235, 229, 220, 0.8);
     backdrop-filter: blur(.1rem);

@@ -14,13 +14,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'EmailBot'
-}
-</script>
-
-<style>
-
-</style>

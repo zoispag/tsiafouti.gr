@@ -14,13 +14,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'EmailError'
-}
-</script>
-
-<style>
-
-</style>

@@ -1,3 +1,11 @@
+<script setup>
+import ServiceItem from './ServiceItem.vue'
+
+import { ref } from "vue";
+
+const activeItem = ref(0);
+</script>
+
 <template>
   <div id="services" class="py-32 px-12 md:px-24 xl:px-64 text-lg bg-gray-300">
     <div class="mx-auto w-full xl:w-5/5">
@@ -74,23 +82,3 @@
 
   </div>
 </template>
-
-<script>
-import ServiceItem from './ServiceItem.vue'
-
-export default {
-  name: 'Services',
-  components: {
-    ServiceItem
-  },
-  data () {
-    return {
-      activeItem: 0
-    }
-  }
-}
-</script>
-
-<style scoped lang="scss">
-
-</style>
