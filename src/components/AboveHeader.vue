@@ -12,7 +12,7 @@ import EmailIconVue from './icons/EmailIcon.vue';
 
     <section class="flex items-center text-sm font-normal md:font-bold text-white gap-3">
       <EmailIconVue />
-      <a href="mailto:info@tsiafouti.gr">info@tsiafouti.gr</a>
+      <a href="mailto:d.tsiafouti@gmail.com">d.tsiafouti@gmail.com</a>
     </section>
 
   </div>
