@@ -1,4 +1,5 @@
 <script setup>
+import AboveHeader from './components/AboveHeader.vue'
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import Bio from './components/Bio.vue'
@@ -11,6 +12,7 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div class="antialiased">
+    <AboveHeader />
     <Header />
     <Hero />
     <Bio />
