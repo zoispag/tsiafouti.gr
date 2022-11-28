@@ -3,6 +3,7 @@ import { GoogleMap, Marker } from 'vue3-google-map';
 import AddressIcon from './icons/AddressIcon.vue';
 import EmailIcon from './icons/EmailIcon.vue';
 import TelephoneIcon from './icons/TelephoneIcon.vue';
+import LinkedInIcon from './icons/LinkedInIcon.vue';
 
 const center = { lat: 37.9828407, lng: 23.7596172 }
 </script>
@@ -22,6 +23,12 @@ const center = { lat: 37.9828407, lng: 23.7596172 }
       <div class="flex items-center text-yellow-800">
         <EmailIcon class="w-5 mr-3" />
         <a class="flex-1" href="mailto:d.tsiafouti@gmail.com">d.tsiafouti@gmail.com</a>
+      </div>
+      <div class="-mt-1 text-yellow-800">
+        <a class="flex items-center" href="https://www.linkedin.com/in/dimitra-tsiafouti-6a6907147">
+          <LinkedInIcon class="w-5 mr-3 fill-current" />
+          <span class="pt-1">LinkedIn</span>
+        </a>
       </div>
     </address>
 
